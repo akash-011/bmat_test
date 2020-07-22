@@ -1,6 +1,6 @@
 ## Prerequesites 
 - Make sure you have Python3 installed on your system.
-- MongDB install instructions here: 
+- MongDB install instructions here: [Install MongoDB](https://docs.mongodb.com/manual/installation/)
 - Install [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/) to make API calls 
 
 
