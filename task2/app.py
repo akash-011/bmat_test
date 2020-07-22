@@ -9,10 +9,12 @@ mongo = PyMongo(app)
 
 @app.route('/<iswc>')
 def get_all(iswc):
-	resp = mongo.db.records.find_one({"ISWC": iswc})
-	res = dumps(resp['right_owners'])
-	return Response(res, mimetype='application/json')
-
+	try:
+		resp = mongo.db.records.find_one({"ISWC": iswc})
+		res = dumps(resp['right_owners'])
+		return Response(res, mimetype='application/json')
+	except Exception as e:
+		print(e)
 
 if __name__ == "__main__":
 	app.run(debug=True)
